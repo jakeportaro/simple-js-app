@@ -16,12 +16,12 @@ let pokemonList = [
   }
 ];
 
-for (i=0; i < pokemonList.length; i++) {
-  if (pokemonList[i].height > 15) {
-  		document.write('<p>' + pokemonList[i].name + ' (Height: ' + pokemonList[i].height + ')  WOW that is Huge!')
-  	} else if (pokemonList[i].height <= 15 && pokemonList[i].height > 5) {
-  		document.write('<p>' + pokemonList[i].name + ' (Height: ' + pokemonList[i].height + ')  That is pretty average')
-  	} else	if (pokemonList[i].height < 10) {
-  		document.write('<p>' + pokemonList[i].name + ' (Height: ' + pokemonList[i].height + ')  That is small!')
+pokemonList.forEach(function(pokemon) {
+  if (pokemon.height > 15) {
+  		document.write('<p>' + pokemon.name + ' (Height: ' + pokemon.height + ')  WOW that is Huge!')
+  	} else if (pokemon.height <= 15 && pokemon.height > 5) {
+  		document.write('<p>' + pokemon.name + ' (Height: ' + pokemon.height + ')  That is pretty average')
+  	} else	if (pokemon.height < 10) {
+  		document.write('<p>' + pokemon.name + ' (Height: ' + pokemon.height + ')  That is small!')
   	}
-}
+});
