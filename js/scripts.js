@@ -32,7 +32,7 @@ let pokemonRepository = (function () {
       showDetails(pokemon);
     });
     button.innerText = pokemon.name;
-    button.classList.add("button-class");
+    button.classList.add("button-style");
     listpokemon.appendChild(button);
     pokemonList.appendChild(listpokemon);
   }
