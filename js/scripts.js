@@ -23,20 +23,31 @@ let pokemonRepository = (function () {
   function add(pokemon){
     pokemonList.push(pokemon);
   }
+
+  function addlistItem(pokemon){
+    let pokemonList = document.querySelector(".pokemon-list");
+    let listpokemon = document.createElement("li");
+    let button = document.createElement("button");
+    button.addEventListener('click', function(pokemon){
+      showDetails(pokemon);
+    });
+    button.innerText = pokemon.name;
+    button.classList.add("button-class");
+    listpokemon.appendChild(button);
+    pokemonList.appendChild(listpokemon);
+  }
+
+  function showDetails(pokemon){
+    console.log(pokemon);
+  }
   return {
     getAll: getAll,
-    add: add
+    add: add,
+    addlistItem: addlistItem
   }})()
 
   let pokemonList = pokemonRepository.getAll();
 
   pokemonList.forEach(function(pokemon) {
-    if (pokemon.height > 15) {
-      document.write('<p>' + pokemon.name + ' (Height: ' + pokemon.height + ')  WOW that is Huge!')
-    } else if (pokemon.height <= 15 && pokemon.height > 5) {
-      document.write('<p>' + pokemon.name + ' (Height: ' + pokemon.height + ')  That is pretty average')
-    } else	if (pokemon.height < 10) {
-      document.write('<p>' + pokemon.name + ' (Height: ' + pokemon.height + ')  That is small!')
-    }
-  }
-)
+    pokemonRepository.addlistItem(pokemon);
+  });

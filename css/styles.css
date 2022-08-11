@@ -2,3 +2,8 @@
   height:350px;
   width:300px;
 }
+.button-style {
+  color: red;
+  opacity: 50;
+  transition-delay: 3s;
+}
