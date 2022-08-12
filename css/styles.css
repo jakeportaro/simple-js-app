@@ -2,7 +2,7 @@
   height:350px;
   width:300px;
 }
-.button-style {
+.button-class {
   color: red;
   opacity: 50;
   transition-delay: 3s;
