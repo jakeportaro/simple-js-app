@@ -126,3 +126,7 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.addListItem(pokemon);
   });
 });
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
